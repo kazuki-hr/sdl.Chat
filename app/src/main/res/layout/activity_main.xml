@@ -33,22 +33,23 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="@dimen/margin"
-        app:layout_constraintBottom_toTopOf="@id/main_button"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/sound_button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/main_progress" />
 
     <EditText
         android:id="@+id/main_input"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin"
+        android:autofillHints=""
         android:hint="@string/main_input_hint"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/main_button"
         app:layout_constraintEnd_toStartOf="@id/main_button"
-        app:layout_constraintTop_toBottomOf="@id/main_logview" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/main_button" />
 
     <Button
         android:id="@+id/main_button"
@@ -59,5 +60,16 @@
         android:text="@string/main_button_label"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/sound_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="onClickSoundButton"
+        android:text="@string/sound_button_label"
+        app:layout_constraintBottom_toTopOf="@+id/main_button"
+        app:layout_constraintEnd_toEndOf="@+id/main_button"
+        app:layout_constraintStart_toStartOf="@+id/main_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
