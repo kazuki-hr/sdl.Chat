@@ -73,6 +73,7 @@ public class ChatMessageReader implements Closeable {
                 if (sound != ChatMessage.SOUND_OFF && sound != ChatMessage.SOUND_ON) {
                     sound = ChatMessage.SOUND_OFF;
                 }
+                break;
             default:
                 reader.skipValue();
                 break;
